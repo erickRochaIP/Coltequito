@@ -6,7 +6,7 @@ typedef struct{
 } porta;
 
 typedef struct{
-    char descricao[300];
+    char descricao[500];
 } corredor;
 
 porta portas[350]; // Qual a porta com maior numero no coltec?
