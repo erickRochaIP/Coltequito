@@ -11,16 +11,27 @@ int main(){
     printf("Voce tera a oportunidade de navegar por toda a escola, desde a portaria ate todo o terceiro andar, explore pelos corredores e descubra para que servev cada sala e porta!");
     delay(3);
 
-    int corredorQual = 0;
+    FILE *arquivo;
     char escolha;
     int escolha_porta;
+    int corredorQual = 0;
+
+    arquivo = fopen("data.bin", "rb");
+    if (arquivo == NULL){
+        fclose(arquivo);
+        arquivo = fopen("data.bin", "wb");
+        fwrite(&corredorQual, sizeof(int), 1, arquivo);
+        fclose(arquivo);
+    }else{
+        fread(&corredorQual, sizeof(int), 1, arquivo);
+        fclose(arquivo);
+    }
 
     while (1){
         if (corredores[corredorQual].descricao[0] == '\0'){
             printf("\n\t Corredor em construcao, volte mais tarde! Enquanto isso volte a portaria e explore outros lugares do coltec");
             corredorQual = 0;
             delay(2);
-            continue;
         }
 
         printf("%s", corredores[corredorQual].descricao);
@@ -29,26 +40,28 @@ int main(){
         if (corredorQual == 0){
             printf(" Ou (s)air? ");
         }
+        setbuf(stdin,NULL);
         scanf(" %c", &escolha);
-        if ((corredorQual == 0) && ((strcmp("s", &escolha) == 0) || (strcmp("S", &escolha) == 0))){
+        if ((corredorQual == 0) && ((escolha == 's') || (escolha == 'S'))){
             exit(0);
         }
-        if ((strcmp("c", &escolha) == 0) || (strcmp("C", &escolha) == 0)){
+        if ((escolha == 'c') || (escolha == 'C')){
             printf("\n Qual o numero do corredor que deseja escolher? ");
             scanf(" %d", &corredorQual);
-            continue;
         }
-        else if ((strcmp("p", &escolha) == 0) || (strcmp("P", &escolha) == 0)){
+        else if ((escolha == 'p') || (escolha == 'P')){
             printf("\n Qual o numero da sala/porta? ");
             scanf(" %d", &escolha_porta);
             printf("%s", portas[escolha_porta]); // Precisa-se bolar uma guarda pra não escolher uma porta que não esteja no corredor
-            continue;
         }
         else{
             printf("\n Digite uma escolha valida: ");
-            scanf(" %c", &escolha);
-            continue;
+            delay(2);
         }
+
+        arquivo = fopen("data.bin", "wb");
+        fwrite(&corredorQual, sizeof(int),1 , arquivo);
+        fclose(arquivo);
     }
 
     return 0;
