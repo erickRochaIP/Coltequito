@@ -23,12 +23,14 @@ void corredor_iniciar(){
     strcpy(corredores[1].descricao, "\n O corredor se estende ate muito em frente, onde acaba num portao. Esse e o corredor chamado de \"Corredor de tgl\", e pela porta XXX e XXX que voce entra na oficina de tgl. A grande porta dupla vermelha, porta XXX, e o auditorio, a sala XXX e a sala da nuped, XXX, tem uma escada para cima(2) e voce ainda pode voltar(0)");
     strcpy(portas[/* auditorio */XX].descricao, "\n Esse e o auditorio, lugar onde acontecem as palestras e aulas com palestras, na maioria, no COLTEC. Aqui tem um piano maneiro que voc%c pode tocar, uma vez que a porta estiver aberta, caso nao esteja, voce pode pedir as chaves no SLOP!");
     strcpy(portas[/*sala do madeira*/XX].descricao, "\n Essa e a sala do Madeira, lugar onde voce tera suas aula de TGL. Ano passado eu tinha aula de 2 em 2 semanas, pois a aula auternava entre a minha subturma (105 - B) e a outra. Aqui temos varias maquinas(cuidado pra nao perder a mao), que com auxilio do Madeira (Alexandre, o professor), podem ser utiliza-das, na aula ou nao. Se voce entregar os materiais e o desenho tecnico, o Madeira pode manufaturar coisas pra voce.");
+    strcpy(portas[/*nuped*/XX].descricao, "\n Eh na sala da nuped que voce pode perguntar sobre qualquer duvida que tenha sobre os horarios das aulas, sera tera aula, o que aconteceu com professores perdidos, alem de informacoes gerais");
 
     // Corredor de eletronica 2 (segundo andar)
 
 
     // Corredor que vai pro salao do gremio 3 (que vem da portaria)
-
+    strcpy(corredores[3].descricao, "\n O corredor tem uma saida para o salao principal (4) e tambem vai para a portaria (0), existem varios escaninhos para alunos guradarem suas coisas num cantinho tem uma porta, com o numero 103 em cima.");
+    strcpy(portas[103].descricao, "\n Eh nessa sala que varias atividades de classe que precisam de um computador podem ocorrer, por exemplo o seu professor de fisica pode precisar de materiais da internet para dar a aula e por isso levaria sua turma para essa sala.");
 
     // Salao principal onde fica o gremio 4
 

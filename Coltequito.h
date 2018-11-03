@@ -2,7 +2,7 @@
 #define Coltequito_H /// Guarda, se ja tiver sido importado no mesmo arquivo(.o), nao importa denovo
 
 typedef struct{
-    char descricao[200];
+    char descricao[500];
 } porta;
 
 typedef struct{
