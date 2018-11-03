@@ -12,6 +12,10 @@ void delay(unsigned int segundos){
     while (time(0) < esperar);
 }
 
+int quest_teste(int portaQuest){
+    printf("\n Voce ouve alguem la dentro dizendo alguma coisa sobre calouros burros");
+}
+
 void corredor_iniciar(){
     // Agora eh so colocar a descricao de TODOS os corredores, o numero da porta deve ser a posicao no vertor porta da struct corredor e tbm deve ser falado o numero a ser digitado pra seguir ou voltar pra outro corredor
     // talvez possamos criar um vetor na struct que tem os numeros de corredores que o corredor atual tem contato, pra verificar se o usuario nao esta tentando teleportar pela escola
@@ -48,4 +52,7 @@ void corredor_iniciar(){
 
     // Corredor da info 12
     strcpy(corredores[12].descricao, "\n Voce esta no corredor da informatica. Conhecida por info, ela e praticalmente a segunda casa dos alunos de desenvolvimento de sistemas. E tambem tem o melhor bebedouro do COLTEC");
+    
+    // QUESTS
+    portas[0].ptrQuest = quest_teste; // Atribuir funcao da quest a uma porta especifica
 }

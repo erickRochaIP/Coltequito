@@ -53,6 +53,10 @@ int main(){
             printf("\n Qual o numero da sala/porta? ");
             scanf(" %d", &escolha_porta);
             printf("%s", portas[escolha_porta]); // Precisa-se bolar uma guarda pra não escolher uma porta que não esteja no corredor
+
+            if (portas[escolha_porta].ptrQuest != NULL){
+                portas[escolha_porta].ptrQuest(escolha_porta); // Chamar funcao de quest dessa porta
+            }
         }
         else{
             printf("\n Digite uma escolha valida: ");
