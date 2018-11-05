@@ -29,8 +29,8 @@ void corredor_iniciar(){
 
 
     // Corredor que vai pro salao do gremio 3 (que vem da portaria)
-    strcpy(corredores[3].descricao, "\n O corredor tem uma saida para o salao principal (4) e tambem vai para a portaria (0), existem varios escaninhos para alunos guradarem suas coisas num cantinho tem uma porta, com o numero 103 em cima.");
-    strcpy(portas[103].descricao, "\n Eh nessa sala que varias atividades de classe que precisam de um computador podem ocorrer, por exemplo o seu professor de fisica pode precisar de materiais da internet para dar a aula e por isso levaria sua turma para essa sala.");
+    strcpy(corredores[3].descricao, "\n O corredor tem uma saida para o salao principal (4) e tambem vai para a portaria (0), existem varios escaninhos para alunos guradarem suas coisas, em um cantinho tem uma porta com o numero 102 em cima.");
+    strcpy(portas[102].descricao, "\n Eh nessa sala que varias atividades de classe que precisam de um computador podem ocorrer, por exemplo o seu professor de fisica pode precisar de materiais da internet para dar a aula e por isso levaria sua turma para essa sala.");
 
     // Salao principal onde fica o gremio 4
 
