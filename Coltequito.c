@@ -8,7 +8,7 @@ int main(){
     delay(2);
     printf("Voce esta no simulador de coltec, um programa criada pelos seus camaradas coltecanos para te ajudar a conhecer todo o coltec. \n");
     delay(3);
-    printf("Voce tera a oportunidade de navegar por toda a escola, desde a portaria ate todo o terceiro andar, explore pelos corredores e descubra para que servev cada sala e porta!");
+    printf("Voce tera a oportunidade de navegar por toda a escola, desde a portaria ate todo o terceiro andar, explore pelos corredores e descubra para que serve cada sala e porta!");
     delay(3);
 
     FILE *arquivo;
@@ -34,7 +34,7 @@ int main(){
             delay(2);
         }
 
-        printf("%s", corredores[corredorQual].descricao);
+        printf("\n\t%s", corredores[corredorQual].descricao);
         delay(2);
         printf("\n Quer seguir para outro (c)orredor ou escolher uma (p)orta?");
         if (corredorQual == 0){
@@ -52,7 +52,7 @@ int main(){
         else if ((escolha == 'p') || (escolha == 'P')){
             printf("\n Qual o numero da sala/porta? ");
             scanf(" %d", &escolha_porta);
-            printf("%s", portas[escolha_porta]); // Precisa-se bolar uma guarda pra não escolher uma porta que não esteja no corredor
+            printf("%s", portas[escolha_porta].descricao); // Precisa-se bolar uma guarda pra não escolher uma porta que não esteja no corredor
         }
         else{
             printf("\n Digite uma escolha valida: ");
