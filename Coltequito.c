@@ -18,7 +18,6 @@ int main(){
 
     arquivo = fopen("data.bin", "rb");
     if (arquivo == NULL){
-        fclose(arquivo);
         arquivo = fopen("data.bin", "wb");
         fwrite(&corredorQual, sizeof(int), 1, arquivo);
         fclose(arquivo);
