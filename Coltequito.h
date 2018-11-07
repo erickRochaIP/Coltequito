@@ -3,6 +3,7 @@
 
 typedef struct{
     char descricao[500];
+    int local;
 } porta;
 
 typedef struct{
