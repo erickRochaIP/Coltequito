@@ -51,7 +51,11 @@ int main(){
         else if ((escolha == 'p') || (escolha == 'P')){
             printf("\n Qual o numero da sala/porta? ");
             scanf(" %d", &escolha_porta);
-            printf("%s", portas[escolha_porta].descricao); // Precisa-se bolar uma guarda pra não escolher uma porta que não esteja no corredor
+            if (corredorQual == portas[escolha_porta].local){
+                printf("%s", portas[escolha_porta].descricao);
+            }else{
+                printf("\n Nao existe essa sala/porta nesse corredor");
+            }
         }
         else{
             printf("\n Digite uma escolha valida: ");
